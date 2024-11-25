@@ -19,7 +19,6 @@ internal class UserInterface
             int i = 1;
             AnsiConsole.MarkupLine($"{i++}.[white]Enter A Number[/]");
             AnsiConsole.MarkupLine($"{i}.[white]Change Country Code (Current Country Code = {_appSettings.CurrentCountryCode})[/]\n");
-            _appSettings.CurrentCountryCode = "test";
 
             int userEntry = GetUserEntry(1, i);
             if (userEntry == 0)
@@ -52,7 +51,9 @@ internal class UserInterface
     {
         if (userEntry == 1)
         {
-            ValidatePhoneNumber validatedPhoneNumber = new(_appSettings.CurrentCountryCode);
+            ValidatePhoneNumber validatePhoneNumber = new(_appSettings.CurrentCountryCode);
+            if (validatePhoneNumber.IsPhoneNumberValid())
+                ; // deserialize it here and print out result in a pleasent way.
         }
     }
 }
