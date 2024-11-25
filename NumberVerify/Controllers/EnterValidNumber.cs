@@ -6,10 +6,10 @@ internal static class EnterValidNumber
     public static string GetPhoneNumber()
     {
         bool validNumber = false;
-        AnsiConsole.MarkupLine("[red3_1]────────────────────────────────────\n[/]");
+        AnsiConsole.MarkupLine("\n[red3_1]────────────────────────────────────\n[/]");
         do
         {
-            var phoneNumber = AnsiConsole.Ask<string>("\nPlease enter a valid phone number ((Dont Include The Country Prefix) e.g 787964386):");
+            var phoneNumber = AnsiConsole.Ask<string>("\n[teal]Please enter a valid phone number ((Dont Include The Country Prefix) e.g 787964386)[/]:");
             // ansi console already handles null or empty
             if (!double.TryParse(phoneNumber, out double _))
             {

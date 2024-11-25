@@ -1,5 +1,4 @@
 ﻿using NumberVerify.Models;
-using System.Net.Http;
 
 namespace NumberVerify.Controllers;
 
@@ -7,7 +6,7 @@ internal class ValidatePhoneNumber
 {
     private string? _countryCode;
     private string? _phoneNumber;
-    private ValidatedPhoneNumber _numberDetails;
+    private ValidatedPhoneNumber? _numberDetails;
     public ValidatePhoneNumber(string countryCode)
     {
         _countryCode = "&country_code=" + countryCode;
